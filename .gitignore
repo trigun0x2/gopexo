@@ -10,13 +10,7 @@
 # http://github.com/RailsApps/rails-composer/issues
 #----------------------------------------------------------------------------
 
-# bundler state
-/.bundle
-/vendor/bundle/
-/vendor/ruby/
-
 # minimal Rails specific artifacts
-db/*.sqlite3
 /log/*
 /tmp/*
 
@@ -27,12 +21,8 @@ db/*.sqlite3
 .rspec
 .redcar/
 .sass-cache
-/config/config.yml
-/config/database.yml
 /coverage.data
 /coverage/
-/db/*.javadb/
-/db/*.sqlite3
 /doc/api/
 /doc/app/
 /doc/features.html
@@ -72,6 +62,3 @@ pickle-email-*.html
 
 # vim artifacts
 **.swp
-
-# Ignore application configuration
-/config/application.yml
