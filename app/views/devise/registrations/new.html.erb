@@ -1,3 +1,19 @@
+<style type="text/css">
+.registrations{
+  background: url(<%= asset_path "splash-image.jpg" %>) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.content{
+  background-color : transparent;
+  box-shadow: 0 0 0;
+}
+</style>
+
+
 <div id="request-invite" class="modal" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
   <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-horizontal' } do |f| %>
     <div class="modal-header">
@@ -14,9 +30,14 @@
     </div>
   <% end %>
 </div>
-<div id="romance-copy" style="text-align: center; margin-top: 80px">
-  <h2>Want in?</h2>
+<div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
+  
+        <h1>GoPexo</h1>
+        <p>We're reinventing the way you and your friends make travel plans</p>
+
 </div>
 <div id="call-to-action" style="text-align: center; margin-top: 80px">
   <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Request invite</a>
 </div>
+
+
