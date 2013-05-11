@@ -15,7 +15,7 @@ Gopexo::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -71,7 +71,7 @@ Gopexo::Application.configure do
 
     config.action_mailer.smtp_settings = {
       :address   => "smtp.mandrillapp.com",
-      :port      => 25,
+      :port      => 587,
       :user_name => ENV["MANDRILL_USERNAME"],
       :password  => ENV["MANDRILL_API_KEY"]
     }
