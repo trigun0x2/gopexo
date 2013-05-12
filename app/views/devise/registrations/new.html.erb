@@ -1,3 +1,4 @@
+
 <style type="text/css">
 .registrations{
   background: url(<%= asset_path "splash-image.jpg" %>) no-repeat center center fixed;
@@ -45,8 +46,8 @@ h2{
 }
 </style>
 
-<div class="sideimage"> <%= image_tag('breezi_placeit.png') %>
-</div>
+<!-- <div class="sideimage"> <%= image_tag('breezi_placeit.png') %>
+</div> -->
 
 <div id="request-invite" class="modal" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
   
@@ -67,7 +68,7 @@ h2{
     </div> -->
     <div class="emailbox">
       <%= f.error_notification %>
-      <%= f.input :email, :placeholder => 'user@example.com' %>
+      <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
     </div>
     <div id="call-to-action" style="text-align: center; margin-top: 15px">
       <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
