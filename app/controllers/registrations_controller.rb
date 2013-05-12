@@ -9,10 +9,18 @@ class RegistrationsController < Devise::RegistrationsController
         sign_in(resource_name, resource)
         (render(:partial => 'thankyou', :layout => false) && return)  if request.xhr?
         respond_with resource, :location => after_sign_up_path_for(resource)
+        respond_to do |format|
+          format.html
+          format.js
+        end
       else
         expire_session_data_after_sign_in!
         (render(:partial => 'thankyou', :layout => false) && return)  if request.xhr?
         respond_with resource, :location => after_inactive_sign_up_path_for(resource)
+        respond_to do |format|
+          format.html
+          format.js
+        end
       end
     else
       clean_up_passwords resource

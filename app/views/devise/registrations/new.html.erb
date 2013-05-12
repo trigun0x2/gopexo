@@ -8,7 +8,7 @@
 }
 
 .content{
-  background-color : transparent;
+  background-color : rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 0;
 }
 
@@ -28,6 +28,14 @@
 h2{
   display: none;
   color: #FFF;
+  margin-bottom: 40px;
+}
+
+.moreinfo{
+  color: #c3c7ca;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 
@@ -39,7 +47,11 @@ h2{
   
         <%= image_tag('pexo.png') %>
         <h3>Collaborate with friends and family to plan your next vacation.</h3>
-        <h2>asdasdsa</h2>
+        <div class="moreinfo">
+          We are a next generation trip planner for groups of friends and family. No more long email chains or messy Google Docs. Our service will help you collaborate on your itinerary, organize your budgets, and figure out cost-sharing.
+          <h4 style="color:#f4e03a;">Sign up for an invitation to beta access now!</h4>
+        </div>
+        <h2></h2>
     <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
     <!-- <div class="modal-header">
       <a class="close" data-dismiss="modal">&#215;</a>
@@ -49,8 +61,8 @@ h2{
       <%= f.error_notification %>
       <%= f.input :email, :placeholder => 'user@example.com' %>
     </div>
-    <div id="call-to-action" style="text-align: center; margin-top: 40px">
-      <%= f.submit "Request Invitation", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+    <div id="call-to-action" style="text-align: center; margin-top: 15px">
+      <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
     </div>
   <% end %>
 </div>
