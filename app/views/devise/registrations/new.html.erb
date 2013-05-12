@@ -7,17 +7,22 @@
         background-size: cover;
 }
 
+.sideimage{
+  height: 100%;
+  width: 60%;
+  float: left;
+}
 .content{
   background-color : rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 0;
 }
-
-.splash h1{
-  font-size: 80px;
+.splash{
+  display: block;
 }
 
 .splash h3{
   color: #FFF;
+  line-height: 1.5274rem;
 }
 
 .emailbox{
@@ -29,16 +34,19 @@ h2{
   display: none;
   color: #FFF;
   margin-bottom: 40px;
+  margin-top: 4rem;
 }
 
 .moreinfo{
-  color: #c3c7ca;
-  width: 45%;
+  color: #DDD;
+  font-size: 1.06rem;
   margin-left: auto;
   margin-right: auto;
 }
 </style>
 
+<div class="sideimage"> <%= image_tag('breezi_placeit.png') %>
+</div>
 
 <div id="request-invite" class="modal" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
   
@@ -72,7 +80,7 @@ h2{
   $('.btn').click(function(){
     console.log('A');
     $('.simple_form').fadeOut(function(){
-      $('h2').html('Thank you for registering!').fadeIn();
+      $('h2').html('Thank you for signing up!').fadeIn();
     });
   });
 
