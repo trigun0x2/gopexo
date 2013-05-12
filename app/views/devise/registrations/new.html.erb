@@ -11,33 +11,63 @@
   background-color : transparent;
   box-shadow: 0 0 0;
 }
+
+.splash h1{
+  font-size: 80px;
+}
+
+.splash h3{
+  color: #FFF;
+}
+
+.emailbox{
+  color: #FFF;
+  margin-top: 30px;
+}
+
+h2{
+  display: none;
+  color: #FFF;
+}
 </style>
 
 
 <div id="request-invite" class="modal" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
-  <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-horizontal' } do |f| %>
-    <div class="modal-header">
-      <a class="close" data-dismiss="modal">&#215;</a>
-      <h3>Request Invitation</h3>
-    </div>
-    <div class="modal-body">
-      <%= f.error_notification %>
-      <%= f.input :email, :placeholder => 'user@example.com' %>
-    </div>
-    <div class="modal-footer">
-      <%= f.submit "Request Invitation", :class => "btn btn-primary", :id => 'invitation_button' %>
-      <a class="btn" data-dismiss="modal" href="#">Close</a>
-    </div>
-  <% end %>
+  
 </div>
 <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
   
-        <h1>GoPexo</h1>
-        <p>We're reinventing the way you and your friends make travel plans</p>
+        <%= image_tag('pexo.png') %>
+        <h3>Collaborate with friends and family to plan your next vacation.</h3>
+        <h2>asdasdsa</h2>
+    <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
+    <!-- <div class="modal-header">
+      <a class="close" data-dismiss="modal">&#215;</a>
+      <h3>Request Invitation</h3>
+    </div> -->
+    <div class="emailbox">
+      <%= f.error_notification %>
+      <%= f.input :email, :placeholder => 'user@example.com' %>
+    </div>
+    <div id="call-to-action" style="text-align: center; margin-top: 40px">
+      <%= f.submit "Request Invitation", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+    </div>
+  <% end %>
+</div>
 
-</div>
-<div id="call-to-action" style="text-align: center; margin-top: 80px">
+<script type="text/javascript">
+
+  $('.btn').click(function(){
+    console.log('A');
+    $('.simple_form').fadeOut(function(){
+      $('h2').html('Thank you for registering!').fadeIn();
+    });
+  });
+
+</script>
+
+<!-- <div id="call-to-action" style="text-align: center; margin-top: 80px">
   <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Request invite</a>
-</div>
+</div> -->
 
 
