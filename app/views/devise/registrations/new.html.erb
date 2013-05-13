@@ -2,9 +2,7 @@
 <style type="text/css">
 
 .content{
-  background-color : rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 0;
-  margin-top: 20px;
+background: transparent;
 }
 
 .splash h3{
@@ -18,7 +16,12 @@ h3{
   color: #FFF;
   margin-top: 30px;
 }
-
+.splash{
+  padding-top: 50px;
+  background-color : rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 0;
+  padding-bottom: 80px;
+}
 h2{
   display: none;
   color: #FFF;
@@ -34,17 +37,12 @@ h2{
 }
 </style>
 <body>
-  <ul class="navigation">
-    <li data-slide="1">Slide 1</li>
-    <li data-slide="2">Slide 2</li>
-    <li data-slide="3">Slide 3</li>
-    <li data-slide="4">Slide 4</li>
-  </ul>
+  
 
   <%= image_tag('pexo.png', :class => "logoimage") %>
 
   <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
-    <div class="wrapper">
+
       <div class="content">
         <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
           
@@ -60,28 +58,24 @@ h2{
                 <%= f.error_notification %>
                 <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
               </div>
-              <div id="call-to-action" style="text-align: center; margin-top: 15px">
+              <div id="call-to-action">
                 <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
               </div>
           <% end %>
         </div>
-
-        <script type="text/javascript">
-
-          $('.btn').click(function(){
-            console.log('A');
-            $('.simple_form').fadeOut(function(){
-              $('h2').html('Thank you for signing up!').fadeIn();
-            });
-          });
-
-          </script>
       </div>
-    </div>
+
   </div>
 
   <div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
-
-  <span class="slideno">Planning Sucks</span>
+  
+    <span class="slideno">Planning Sucks</span>
   </div>
+
+  <div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+  </div>
+
+  <div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
+  </div>
+
 </body>

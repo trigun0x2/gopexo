@@ -7,7 +7,9 @@ html,body{
 .navigation{
 	position:fixed;
 	z-index:1;
-	top:20px;
+	top:120px;
+	padding-right: 55px;
+	background-color: rgba(255,255,255,0.7);
 }
 .navigation li{
 	color:#333333;
@@ -21,19 +23,19 @@ html,body{
 	text-align:left;
 	width:53px;
 }
-.navigation li:hover,.active{
+.navigation li:hover, .active{
 	font-size:25px;
 	cursor:pointer;
 	width:100px!important;
 }
 .logoimage{
-position:fixed;
-top:50%;
-left:50%;
-width:446px;
-margin-top:-41px;
-margin-left:-223px;
-z-index:1;
+	position:fixed;
+	top:22%;
+	left:50%;
+	width:446px;
+	margin-top:-41px;
+	margin-left:-223px;
+	z-index:1;
 }
 .slide{
 	background-attachment: fixed;
@@ -50,11 +52,11 @@ z-index:1;
 }
 .slideno{
 	position:absolute;
-	bottom:0px;
+	bottom:10%;
 	left:0px;
 	font-size:100px;
 	font-weight:bold;
-	color:rgba(255,255,255,0.3);
+	color:rgba(255,255,255,0.7);
 }
 .button{
 	display:block;
@@ -76,95 +78,33 @@ z-index:1;
 *******************************/
 #slide1{
 
-background: url(<%= asset_path "splash-image.jpg" %>) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+	background: url(<%= asset_path "splash-image.jpg" %>);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	
 }
 /******************************
  SLIDE 2 
 *******************************/
 #slide2{
-	background-color:#005c99;
-	
-}
-#slide2 img:first-child{
-	position:absolute;
-top: 700px;
-left: -150px;
-}
-#slide2 img:nth-child(2){
-	position:absolute;
-	top:300px;
-	left:100px;
-}
-#slide2 img:nth-child(3){
-	position:absolute;
-	top:600px;
-	left:300px;
-}
-#slide2 img:nth-child(4){
-	position:absolute;
-	top:400px;
-	left:300px;
-}
-#slide2 img:nth-child(5){
-	position:absolute;
-	top:600px;
-	right:300px;
-}
-#slide2 img:nth-child(6){
-	position:absolute;
-	top:600px;
-	right:300px;
-}
-#slide2 img:nth-child(7){
-	position:absolute;
-	top:400px;
-	right:100px;
-}
-#slide2 img:nth-child(8){
-	position:absolute;
-	top:100px;
-	right:300px;
+	/*background-image:url(<%= asset_path "timthumb.jpg" %>);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-filter: blur(2px);*/
 }
 /******************************
  SLIDE 3 
 *******************************/
 #slide3{
-	background-color:#b6c10b;
-}
-#slide3 img:first-child{
-	position:absolute;
-top: 700px;
-left: 300px;
-}
-#slide3 img:nth-child(2){
-	position:absolute;
-	top:100px;
-	left:100px;
-}
-#slide3 img:nth-child(3){
-	position:absolute;
-	top:150px;
-	left:300px;
-}
-#slide3 img:nth-child(4){
-	position:absolute;
-	top:450px;
-	left:300px;
-}
-#slide3 img:nth-child(5){
-	position:absolute;
-	top:200px;
-	right:300px;
-}
-#slide3 img:nth-child(6){
-	position:absolute;
-	top:100px;
-	right:300px;
+	background-image:url(<%= asset_path "pplonboat.jpg" %>);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 /******************************
  SLIDE 4 
