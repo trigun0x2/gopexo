@@ -26,8 +26,9 @@
   line-height: 1.5274rem;
 }
 
-.emailbox{
-  color: #FFF;
+#email-container {
+  width: 50%;
+  margin: auto;
   margin-top: 30px;
 }
 
@@ -67,12 +68,14 @@ h2{
       <a class="close" data-dismiss="modal">&#215;</a>
       <h3>Request Invitation</h3>
     </div> -->
-    <div class="emailbox">
-      <%= f.error_notification %>
-      <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
-    </div>
-    <div id="call-to-action" style="text-align: center; margin-top: 15px">
-      <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+    <div id="email-container" class="row-fluid">
+      <div class="span8 emailbox">
+        <%= f.error_notification %>
+        <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
+      </div>
+      <div class="span4" id="call-to-action" style="text-align: center">
+        <%= f.submit "Sign up", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+      </div>
     </div>
   <% end %>
 </div>
