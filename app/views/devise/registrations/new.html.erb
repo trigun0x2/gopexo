@@ -72,7 +72,7 @@ h2{
       <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
     </div>
     <div id="call-to-action" style="text-align: center; margin-top: 15px">
-      <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+      <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button', :input_html => { onClick: "_gaq.push(['_trackEvent', 'signup', 'betasignup', 'signup for beta',, false]);"} %>
     </div>
   <% end %>
 </div>
