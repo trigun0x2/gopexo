@@ -67,3 +67,10 @@ function loadSocial() {
       $.getScript('https://apis.google.com/js/plusone.js');
     }
 }
+
+
+  $('.btn').click(function(){
+    $('.simple_form').fadeOut(function(){
+      $('h2').html('Thank you for signing up!').fadeIn();
+    });
+  });
