@@ -1,31 +1,19 @@
 
 <style type="text/css">
-.registrations{
-  background: url(<%= asset_path "splash-image.jpg" %>) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
 
-.sideimage{
-  height: 100%;
-  width: 60%;
-  float: left;
-}
 .content{
   background-color : rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 0;
-}
-.splash{
-  display: block;
+  margin-top: 20px;
 }
 
 .splash h3{
   color: #FFF;
   line-height: 1.5274rem;
 }
-
+h3{
+  margin-top: 10%;
+}
 .emailbox{
   color: #FFF;
   margin-top: 30px;
@@ -37,7 +25,6 @@ h2{
   margin-bottom: 40px;
   margin-top: 4rem;
 }
-
 .moreinfo{
   width: 80%;
   color: #DDD;
@@ -46,50 +33,55 @@ h2{
   margin-right: auto;
 }
 </style>
+<body>
+  <ul class="navigation">
+    <li data-slide="1">Slide 1</li>
+    <li data-slide="2">Slide 2</li>
+    <li data-slide="3">Slide 3</li>
+    <li data-slide="4">Slide 4</li>
+  </ul>
 
-<!-- <div class="sideimage"> <%= image_tag('breezi_placeit.png') %>
-</div> -->
+  <%= image_tag('pexo.png', :class => "logoimage") %>
 
-<div id="request-invite" class="modal" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
-  
-</div>
-<div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
-  
-        <%= image_tag('pexo.png') %>
-        <h3>Collaborate with friends and family to plan your next vacation.</h3>
-        <div class="moreinfo">
-          We are a next generation trip planner for groups of friends and family. No more long email chains or messy Google Docs. Our service will help you collaborate on your itinerary, organize your budgets, and figure out cost-sharing.
-          <h4 style="color:#f4e03a;">Sign up for an invitation to beta access now!</h4>
+  <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
+    <div class="wrapper">
+      <div class="content">
+        <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
+          
+                
+                <h3>Collaborate with friends and family to plan your next vacation.</h3>
+                <div class="moreinfo">
+                  We are a next generation trip planner for groups of friends and family. No more long email chains or messy Google Docs. Our service will help you collaborate on your itinerary, organize your budgets, and figure out cost-sharing.
+                  <h4 style="color:#f4e03a;">Sign up for an invitation to beta access now!</h4>
+                </div>
+                <h2></h2>
+            <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
+              <div class="emailbox">
+                <%= f.error_notification %>
+                <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
+              </div>
+              <div id="call-to-action" style="text-align: center; margin-top: 15px">
+                <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+              </div>
+          <% end %>
         </div>
-        <h2></h2>
-    <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
-    <!-- <div class="modal-header">
-      <a class="close" data-dismiss="modal">&#215;</a>
-      <h3>Request Invitation</h3>
-    </div> -->
-    <div class="emailbox">
-      <%= f.error_notification %>
-      <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
+
+        <script type="text/javascript">
+
+          $('.btn').click(function(){
+            console.log('A');
+            $('.simple_form').fadeOut(function(){
+              $('h2').html('Thank you for signing up!').fadeIn();
+            });
+          });
+
+          </script>
+      </div>
     </div>
-    <div id="call-to-action" style="text-align: center; margin-top: 15px">
-      <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button', :input_html => { onClick: "_gaq.push(['_trackEvent', 'signup', 'betasignup', 'signup for beta',, false]);"} %>
-    </div>
-  <% end %>
-</div>
+  </div>
 
-<script type="text/javascript">
+  <div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
 
-  $('.btn').click(function(){
-    console.log('A');
-    $('.simple_form').fadeOut(function(){
-      $('h2').html('Thank you for signing up!').fadeIn();
-    });
-  });
-
-</script>
-
-<!-- <div id="call-to-action" style="text-align: center; margin-top: 80px">
-  <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Request invite</a>
-</div> -->
-
-
+  <span class="slideno">Planning Sucks</span>
+  </div>
+</body>
