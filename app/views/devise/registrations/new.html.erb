@@ -9,9 +9,6 @@ background: transparent;
   color: #FFF;
   line-height: 1.5274rem;
 }
-h3{
-  margin-top: 10%;
-}
 .emailbox{
   color: #FFF;
   margin-top: 30px;
@@ -22,11 +19,27 @@ h3{
   box-shadow: 0 0 0;
   padding-bottom: 80px;
 }
-h2{
+.splash h2{
   display: none;
   color: #FFF;
   margin-bottom: 40px;
   margin-top: 4rem;
+}
+
+#slide3 h2 {
+  font-family: 'Quando';
+  color: #D66666;
+  font-size: 66px;
+  top: 150px;
+  margin-left: 100px;
+  position: relative;
+}
+#slide3 h3 {
+  position: relative;
+  top: 150px;
+  left: 100px;
+  color: #FFFFDE;
+  font-size: 30px;
 }
 .moreinfo{
   width: 80%;
@@ -37,16 +50,13 @@ h2{
 }
 </style>
 <body>
-  
-
-  <%= image_tag('pexo.png', :class => "logoimage") %>
-
-  <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
+  <link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
+    <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
 
       <div class="content">
         <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
           
-                
+                <%= image_tag('pexo.png', :class => "logoimage") %>
                 <h3>Collaborate with friends and family to plan your next vacation.</h3>
                 <div class="moreinfo">
                   We are a next generation trip planner for groups of friends and family. No more long email chains or messy Google Docs. Our service will help you collaborate on your itinerary, organize your budgets, and figure out cost-sharing.
@@ -71,10 +81,29 @@ h2{
     <span class="slideno">Planning Sucks</span>
   </div>
 
-  <div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+  <div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.2">
+    <div class="scrollblock">
+      <h2 id="fade-in1">Get Social</h2>
+      <h3 id="fade-in2">Connect with your group to create the perfect trip plan!</h3>
+    </div>
   </div>
 
   <div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
   </div>
 
 </body>
+<script>
+  $(document).ready(function() {
+    var scrollorama = $.scrollorama({
+      blocks:'.scrollblock',
+      enablePin:false
+    });
+
+    scrollorama.animate('#fade-in1',{
+      delay: -350, duration:400, property:'opacity', start:0
+    });
+    scrollorama.animate('#fade-in2',{
+      delay: -350, duration:400, property:'opacity', start:0
+    });
+  });
+</script>
