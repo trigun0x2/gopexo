@@ -14,10 +14,12 @@ background: transparent;
   margin-top: 30px;
 }
 .splash{
-  padding-top: 50px;
+  padding-top: 200px;
   background-color : rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 0;
   padding-bottom: 80px;
+  vertical-align: middle;
+  color: #FFF;
 }
 .splash h2{
   display: none;
@@ -25,79 +27,8 @@ background: transparent;
   margin-bottom: 40px;
   margin-top: 4rem;
 }
-
-#slide2 h3 {
-  font-size: 45px;
-  color: black;
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  text-align: center;
-  vertical-align: center;
-  margin-bottom: 20px;
-}
-
-.slide2bg {
-  position: relative;
-  top: 400px;
-  background-color: rgba(0,0,0,0.7);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.slide3bg {
-  position: relative;
-  top: 100px;
-  background-color: rgba(0,0,0,0.7);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.text-bg {
-  /*background-color: rgba(198,200,198,0.9);*/
-  background-color: white;
-  position: relative;
-  top: 500px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.3;
-  left:0 !important;
-}
-
-#slide3 h2 {
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  color: #D66666;
-  font-size: 66px;
-  margin-left: 100px;
-}
-#slide3 h3 {
-  margin-left: 100px;
-  color: #FFFFBB;
-  line-height: 1.5;
-  font-size: 26px;
-  width: 70%;
-  font-family: "Roboto Slab";
-  font-weight: 300;
-}
-
-#slide4 h2 {
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  color: #1DD1D1;
-  font-size: 66px;
-  margin-left: 100px;
-}
-#slide4 h3 {
-  margin-left: 100px;
-  color: #FFFFBB;
-  line-height: 1.5;
-  font-size: 26px;
-  width: 70%;
-  font-family: "Roboto Slab";
-  font-weight: 300;
+.scrolldown{
+  margin-top: 200px;
 }
 
 .moreinfo{
@@ -115,29 +46,28 @@ background: transparent;
 }
 </style>
 <body>
-  <link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
     <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
 
       <div class="content">
         <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
           
-                <%= image_tag('pexo.png', :class => "logoimage") %>
-                <h3>Collaborate with friends and family to plan your next vacation.</h3>
-                <div class="moreinfo">
-                  We are a next generation trip planner for groups of friends and family. No more long email chains or messy Google Docs. Our service will help you collaborate on your itinerary, organize your budgets, and figure out cost-sharing.
-                  <h4 style="color:#f4e03a;">Sign up for an invitation to beta access now!</h4>
-                </div>
-                <h2></h2>
+                
+                <h1>Planning a vacation?</h1>
+                  <p class="scrolldown">
+                  <p>SCROLL TO CONTROL</p> 
+                  <p><i class="icon-chevron-down"></i></p>
+                  <p><i class="icon-chevron-down"></i></p>
+                  <p>
+               
             <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
-              <div class="emailbox">
+              <!-- <div class="emailbox">
                 <%= f.error_notification %>
                 <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
               </div>
               <div id="call-to-action">
                 <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
-              </div>
+              </div> -->
           <% end %>
         </div>
       </div>
