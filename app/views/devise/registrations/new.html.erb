@@ -14,10 +14,12 @@ background: transparent;
   margin-top: 30px;
 }
 .splash{
-  padding-top: 50px;
+  padding-top: 200px;
   background-color : rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 0;
   padding-bottom: 80px;
+  vertical-align: middle;
+  color: #FFF;
 }
 .splash h2{
   display: none;
@@ -26,95 +28,8 @@ background: transparent;
   margin-top: 4rem;
 }
 
-#slide2 h3 {
-  font-size: 46px;
-  color: black;
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  text-align: center;
-  vertical-align: center;
-  margin-bottom: 20px;
-}
-
-.slide2bg {
-  position: relative;
-  top: 400px;
-  background-color: rgba(0,0,0,0.7);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.slide3bg {
-  position: relative;
-  top: 100px;
-  background-color: rgba(0,0,0,0.7);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.text-bg {
-  /*background-color: rgba(198,200,198,0.9);*/
-  background-color: white;
-  position: relative;
-  top: 500px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.3;
-  left:0 !important;
-}
-
-#slide3 h2 {
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  color: #D66666;
-  font-size: 66px;
-  margin-left: 100px;
-}
-#slide3 h3 {
-  margin-left: 100px;
-  color: #FFFFBB;
-  line-height: 1.5;
-  font-size: 26px;
-  width: 70%;
-  font-family: "Roboto Slab";
-  font-weight: 300;
-}
-
-#slide4 h2 {
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  color: #1DD1D1;
-  font-size: 66px;
-  margin-left: 100px;
-}
-#slide4 h3 {
-  margin-left: 100px;
-  color: #FFFFBB;
-  line-height: 1.5;
-  font-size: 26px;
-  width: 70%;
-  font-family: "Roboto Slab";
-  font-weight: 300;
-}
-
-#slide5 h2 {
-  font-family: 'Roboto Slab';
-  font-weight: 300;
-  color: #AB38F2;
-  font-size: 66px;
-  margin-left: 100px;
-}
-#slide5 h3 {
-  margin-left: 100px;
-  color: #FFFFBB;
-  line-height: 1.5;
-  font-size: 26px;
-  width: 70%;
-  font-family: "Roboto Slab";
-  font-weight: 300;
+.scrolldown{
+  margin-top: 200px;
 }
 
 .moreinfo{
@@ -138,21 +53,22 @@ background: transparent;
       <div class="content">
         <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
           
-                <%= image_tag('pexo.png', :class => "logoimage") %>
-                <h3>Collaborate with friends and family to plan your next vacation.</h3>
-                <div class="moreinfo">
-                  We are a next generation trip planner for groups of friends and family. No more long email chains or messy Google Docs. Our service will help you collaborate on your itinerary, organize your budgets, and figure out cost-sharing.
-                  <h4 style="color:#f4e03a;">Sign up for an invitation to beta access now!</h4>
-                </div>
-                <h2></h2>
+                
+                <h1>Planning a vacation?</h1>
+                  <p class="scrolldown">
+                  <p>SCROLL TO CONTROL</p> 
+                  <p><i class="icon-chevron-down"></i></p>
+                  <p><i class="icon-chevron-down"></i></p>
+                  <p>
+               
             <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
-              <div class="emailbox">
+              <!-- <div class="emailbox">
                 <%= f.error_notification %>
                 <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
               </div>
               <div id="call-to-action">
                 <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
-              </div>
+              </div> -->
           <% end %>
         </div>
       </div>
@@ -175,7 +91,7 @@ background: transparent;
 
   <div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.2">
     <div class="scrollblock row-fluid">
-      <div class="span7 offset5">
+      <div class="span6 offset5">
         <div class="slide2bg" id="fade-in1">
         <h2>Connect</h2>
         <h3>We'll make it easy to connect and communicate with your group</h3>
@@ -186,8 +102,8 @@ background: transparent;
 
   <div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
     <div class="scrollblock row-fluid">
-      <div class="span7 offset1">
-        <div class="slide3bg" id="fade-in2">
+      <div class="span6 offset1">
+        <div class="slide4bg" id="fade-in2">
         <h2>Share</h2>
         <h3>Cool things you find can be shared on the Idea Board</h3>
         </div>
@@ -197,10 +113,10 @@ background: transparent;
 
   <div class="slide" id="slide5" data-slide="4" data-stellar-background-ratio="0.5">
     <div class="scrollblock row-fluid">
-      <div class="span7 offset1">
-        <div class="slide3bg" id="fade-in2">
+      <div class="span6 offset5">
+        <div class="slide5bg" id="fade-in2">
         <h2>Collaborate</h2>
-        <h3>Make decisions about your itinerary together!</h3>
+        <h3>Make decisions about your itinerary, together!</h3>
         </div>
       </div>
     </div>
