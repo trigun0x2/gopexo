@@ -11,7 +11,6 @@ background: transparent;
 }
 .emailbox{
   color: #FFF;
-  margin-top: 30px;
 }
 .splash{
   padding-top: 200px;
@@ -59,17 +58,8 @@ background: transparent;
                   <p>SCROLL TO CONTROL</p> 
                   <p><i class="icon-chevron-down"></i></p>
                   <p><i class="icon-chevron-down"></i></p>
-                  <p>
                
-            <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
-              <!-- <div class="emailbox">
-                <%= f.error_notification %>
-                <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
-              </div>
-              <div id="call-to-action">
-                <%= f.submit "Sign up for the beta", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
-              </div> -->
-          <% end %>
+
         </div>
       </div>
 
@@ -144,8 +134,19 @@ background: transparent;
     <div class="scrollblock row-fluid">
       <div class="span7 offset2">
         <div class="slide5bg" id="fade-out1">
-        <h2>Have a Great Time!</h2>
+          <h2>Have a Great Time!</h2>
         </div>
+        <div class="slide8bg" >
+            <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
+            <div class="emailbox">
+              <%= f.error_notification %>
+              <%= f.input :email, :placeholder => 'Enter your Email' , label: false %>
+            </div>
+            <div id="call-to-action">
+              <%= f.submit "Sign Up", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+            </div>
+            <% end %>
+          </div>
       </div>
     </div>
   </div>
@@ -162,6 +163,8 @@ background: transparent;
     });
     scrollorama.animate('#fade-in2',{
       delay:300, duration:300, property:'opacity', start:0
+    });
+    scrollorama.animate('#fade-in-final',{ duration:1000, property:'opacity', start:0
     });
   });
 </script>
