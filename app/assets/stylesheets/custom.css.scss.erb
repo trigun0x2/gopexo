@@ -1,0 +1,361 @@
+
+html,body{
+	width:100%;
+	height:100%;
+}
+
+.navigation{
+	position:fixed;
+	z-index:1;
+	top:120px;
+	padding-right: 55px;
+	background-color: rgba(255,255,255,0.7);
+}
+.navigation li{
+	color:#333333;
+	display:block;
+	padding: 0 10px;
+	line-height:30px;
+	margin-bottom:2px;
+	font-weight:bold;
+	-webkit-transition: all .2s ease-in-out;
+	border-bottom:1px solid black;
+	text-align:left;
+	width:53px;
+}
+.navigation li:hover, .active{
+	font-size:25px;
+	cursor:pointer;
+	width:100px!important;
+}
+.logoimage{
+	width:446px;
+}
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+	position: relative;
+	box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+.wrapper{
+	width:960px;
+	height:200px;
+	margin:0 auto;
+	position:relative;
+}
+.slideno{
+	position:absolute;
+	bottom:10%;
+	left:0px;
+	font-size:100px;
+	font-weight:bold;
+	color:rgba(255,255,255,0.7);
+}
+.button{
+	display:block;
+	width:50px;
+	height:50px;
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	background-color:#333333;
+	background-image:url(../images/arrow.png);
+}
+.button:hover{
+	background-color:#494949;
+	cursor:pointer;
+}
+
+/******************************
+ SLIDE 1 
+*******************************/
+#slide1{
+
+	background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/******************************
+ SLIDE 2 
+*******************************/
+#slide2{
+	background-image:url('http://acoupletravelers.com/wp-content/uploads/2012/03/where-do-you-want-to-go-book-1-of-1.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 1000px;
+}
+
+#slide2 h3 {
+  font-size: 45px;
+  color: black;
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  text-align: center;
+  vertical-align: center;
+  margin-bottom: 20px;
+}
+
+.slide2bg {
+  position: relative;
+  top: 400px;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/******************************
+ SLIDE 3 
+*******************************/
+#slide3{
+
+	background-image:url(<%= asset_path "social622.jpg" %>);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 1300px;
+}
+
+.slide3bg {
+  position: relative;
+  top: 100px;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#slide3 h2 {
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  color: #D66666;
+  font-size: 66px;
+  margin-left: 100px;
+}
+#slide3 h3 {
+  margin-left: 100px;
+  color: #FFFFBB;
+  line-height: 1.5;
+  font-size: 26px;
+  width: 70%;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+}
+
+/******************************
+ SLIDE 4 
+*******************************/
+
+#slide4{
+
+	background-image:url(<%= asset_path "pplonboat800.jpg" %>);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 900px;
+}
+
+
+#slide4 h2 {
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  color: #1DD1D1;
+  font-size: 66px;
+  margin-left: 100px;
+}
+#slide4 h3 {
+  margin-left: 100px;
+  color: #FFFFBB;
+  line-height: 1.5;
+  font-size: 26px;
+  width: 70%;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+}
+
+.slide4bg {
+  position: relative;
+  top: 200px;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+/******************************
+ SLIDE 5 
+*******************************/
+#slide5{
+
+	background-image:url(<%= asset_path "voting2.jpg" %>);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 900px;
+}
+
+#slide5 h2 {
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  color: darksalmon;
+  font-size: 66px;
+  margin-left: 100px;
+}
+#slide5 h3 {
+  margin-left: 100px;
+  color: #FFFFBB;
+  line-height: 1.5;
+  font-size: 26px;
+  width: 70%;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+}
+
+.slide5bg {
+  position: relative;
+  top: 200px;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/******************************
+ SLIDE 6 
+*******************************/
+#slide6{
+
+	background-image:url(<%= asset_path "money.jpg" %>);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#slide6 h2 {
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  color: #46D10F;
+  font-size: 66px;
+  margin-left: 100px;
+}
+#slide6 h3 {
+  margin-left: 100px;
+  color: #FFFFBB;
+  line-height: 1.5;
+  font-size: 26px;
+  width: 70%;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+}
+
+.slide6bg {
+  position: relative;
+  top: 400px;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/******************************
+ SLIDE 7
+*******************************/
+#slide7{
+	height: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	h2 {
+		font-family: 'Roboto Slab';
+  	font-weight: 300;
+  	color: black;
+  	font-size: 55px;
+  	text-align: center;
+	}
+	h3 {
+		color: black;
+		font-size: 20px;
+		font-family: 'Roboto Slab';
+  	font-weight: 300;
+  	text-align: center;
+  	vertical-align: center;
+  	margin-bottom: 20px;
+	}
+}
+
+/******************************
+ SLIDE 8
+*******************************/
+#slide8{
+
+	background-image:url(<%= asset_path "splash-image600.jpg" %>);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 1000px;
+}
+
+#slide8 h2 {
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  color: #E892CE;
+  font-size: 66px;
+  margin-left: 100px;
+  line-height: 1.3;
+}
+#slide8 h3 {
+  color: #FFFFBB;
+  line-height: 1.5;
+  font-size: 26px;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+}
+
+.slide8bg {
+  position: relative;
+  text-align: center;
+
+  top: 400px;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 70%;
+}
+
+#footer{
+	height: 200px;
+	background-color: #FFF;
+}
+
+.text-bg {
+  /*background-color: rgba(198,200,198,0.9);*/
+  background-color: white;
+  position: relative;
+  top: 400px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.3;
+  left:0 !important;
+}
+
+.emailbox input {
+  height: 33px;
+  font-size: 21px;
+  width: 300px;
+}
+
+.thankyoutext{
+	padding-top: 20px;
+	padding-bottom: 70px;
+	display: none;
+	color: white;
+	font-size: 55px;
+}
+

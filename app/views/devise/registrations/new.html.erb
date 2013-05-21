@@ -1,42 +1,35 @@
 
 <style type="text/css">
-.registrations{
-  background: url(<%= asset_path "splash-image600.jpg" %>) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
 
-.sideimage{
-  height: 100%;
-  width: 60%;
-  float: left;
-}
 .content{
-  background-color : rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 0;
-}
-.splash{
-  display: block;
+background: transparent;
 }
 
 .splash h3{
   color: #FFF;
   line-height: 1.5274rem;
 }
-
-#email-container {
-  width: 50%;
-  margin: auto;
-  margin-top: 30px;
+.emailbox{
+  color: #FFF;
 }
-
-h2{
+.splash{
+  padding-top: 200px;
+  background-color : rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 0;
+  padding-bottom: 80px;
+  vertical-align: middle;
+  color: #FFF;
+}
+.splash h2{
   display: none;
   color: #FFF;
   margin-bottom: 40px;
   margin-top: 4rem;
+}
+
+.scrolldown{
+  margin-top: 150px;
+
 }
 
 .moreinfo{
@@ -46,15 +39,131 @@ h2{
   margin-left: auto;
   margin-right: auto;
 }
+.socialimg {
+  width: 400px;
+  top: 200px;
+  left: 300px;
+  position: relative;
+}
 </style>
+<body>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+    <div class="slide visible-desktop" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
 
-<!-- <div class="sideimage"> <%= image_tag('breezi_placeit.png') %>
-</div> -->
+      <div class="content">
+        <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">               
+                  <%= image_tag('pexo.png') %>
+                  <p class="scrolldown">
+                  <p>SCROLL TO CONTROL</p> 
+                  <p><i class="icon-chevron-down"></i></p>
+                  <p><i class="icon-chevron-down"></i></p>
+                  </p>
 
-<div id="request-invite" class="modal" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
-  
-</div>
-<div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">
+        </div>
+      </div>
+
+  </div>
+
+  <div class="slide visible-desktop" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+    <div class="text-bg" data-stellar-ratio="1.5">
+      <h3>Planning a group trip doesn't have to suck</h3>
+      <div class="row-fluid">
+        <div class="span12" style="text-align: center;">
+          GoPexo can help you and your group organize ideas! 
+          <br/>
+          <br/>
+          An amazing vacation awaits after these simple steps:
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide visible-desktop" id="slide3" data-slide="3" data-stellar-background-ratio="0.2">
+    <div class="scrollblock row-fluid">
+      <div class="span6 offset5">
+        <div class="slide2bg" id="fade-in1">
+        <h2>Connect</h2>
+        <h3>We'll make it easy to connect and communicate with your group</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide visible-desktop" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
+    <div class="scrollblock row-fluid">
+      <div class="span6 offset1">
+        <div class="slide4bg" id="fade-in2">
+        <h2>Share</h2>
+        <h3>Cool things you find can be shared on the Idea Board</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide visible-desktop" id="slide5" data-slide="4" data-stellar-background-ratio="0.5">
+    <div class="scrollblock row-fluid">
+      <div class="span6 offset5">
+        <div class="slide5bg" id="fade-in2">
+        <h2>Collaborate</h2>
+        <h3>Make decisions about your itinerary, together!</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide visible-desktop" id="slide6" data-slide="4" data-stellar-background-ratio="0.5">
+    <div class="scrollblock row-fluid">
+      <div class="span6 offset1">
+        <div class="slide5bg" id="fade-in2">
+        <h2>Visualize</h2>
+        <h3>Finally, look over your budget and split the costs</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide visible-desktop" id="slide7" data-slide="4" data-stellar-background-ratio="0.5">
+    <div class="scrollblock row-fluid">
+      <div class="span4 offset4">
+        <h2>That's it!</h2>
+        <h3>Now you're all set! Just remember to</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide visible-desktop" id="slide8" data-slide="8" data-stellar-background-ratio="0.1">
+    <div class="scrollblock row-fluid">
+      <div class="span7">
+        <div class="slide5bg" id="fade-out1">
+          <h2>Have a Great Time!</h2>
+        </div>
+      </div>
+
+    <div class="span11">
+      <div class="slide8bg">
+          <h3>Signup for Beta Invitation</h3>
+            <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
+            <div class="emailbox">
+              <%= f.error_notification %>
+              <%= f.input :email, :placeholder => 'Enter your Email' , label: false %>
+            </div>
+            <div id="call-to-action">
+              <%= f.submit "Sign Up", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+            </div>
+            <% end %>
+
+            <div class="thankyoutext"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+
+  <!-- MOBILE -->
+
+
+<div id="romance-copy" class="splash hidden-desktop" style="text-align: center; margin-top: 80px">
   
         <%= image_tag('pexo.png') %>
         <h3>Collaborate with friends and family to plan your next vacation.</h3>
@@ -79,19 +188,5 @@ h2{
     </div>
   <% end %>
 </div>
-
-<script type="text/javascript">
-
-  $('.btn').click(function(){
-    $('.simple_form').fadeOut(function(){
-      $('h2').html('Thank you for signing up!').fadeIn();
-    });
-  });
-
-</script>
-
-<!-- <div id="call-to-action" style="text-align: center; margin-top: 80px">
-  <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Request invite</a>
-</div> -->
-
-
+  
+</body>
