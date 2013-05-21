@@ -29,14 +29,37 @@ $('document').ready(function() {
       type: "POST",
       url: "/users",
       data: dataString,
+      error: function(data){
+        alert('random error');
+      },
       success: function(data) {
-        $('#request-invite').html(data);
+
+            $('.simple_form').fadeOut(function(){
+              $('.thankyoutext').html('Thank you for signing up!').fadeIn();
+            });
+
         // loadSocial();
       }
     });
     return false;
   });
 })
+
+$(document).ready(function() {
+    var scrollorama = $.scrollorama({
+      blocks:'.scrollblock',
+      enablePin:false
+    });
+
+    scrollorama.animate('#fade-in1',{
+      duration:200, property:'opacity', start:0
+    });
+    scrollorama.animate('#fade-in2',{
+      delay:300, duration:300, property:'opacity', start:0
+    });
+    scrollorama.animate('#fade-in-final',{ duration:1000, property:'opacity', start:0
+    });
+  });
 
 // load social sharing scripts if the page includes a Twitter "share" button
 // function loadSocial() {

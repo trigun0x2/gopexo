@@ -70,7 +70,7 @@ background: transparent;
     <div class="text-bg" data-stellar-ratio="1.5">
       <h3>Planning a group trip doesn't have to suck</h3>
       <div class="row-fluid">
-        <div class="span6 offset3">
+        <div class="span12" style="text-align: center;">
           GoPexo can help you and your group organize ideas! 
           <br/>
           <br/>
@@ -102,7 +102,7 @@ background: transparent;
     </div>
   </div>
 
-  <div class="slide" id="slide5" data-slide="4" data-stellar-background-ratio="0.5">
+  <div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0.5">
     <div class="scrollblock row-fluid">
       <div class="span6 offset5">
         <div class="slide5bg" id="fade-in2">
@@ -113,7 +113,7 @@ background: transparent;
     </div>
   </div>
 
-  <div class="slide" id="slide6" data-slide="4" data-stellar-background-ratio="0.5">
+  <div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0.5">
     <div class="scrollblock row-fluid">
       <div class="span6 offset1">
         <div class="slide5bg" id="fade-in2">
@@ -124,7 +124,7 @@ background: transparent;
     </div>
   </div>
 
-  <div class="slide" id="slide7" data-slide="4" data-stellar-background-ratio="0.5">
+  <div class="slide" id="slide7" data-slide="7" data-stellar-background-ratio="0.5">
     <div class="scrollblock row-fluid">
       <div class="span4 offset4">
         <h2>That's it!</h2>
@@ -133,15 +133,16 @@ background: transparent;
     </div>
   </div>
 
-  <div class="slide" id="slide8" data-slide="4" data-stellar-background-ratio="0.1">
+  <div class="slide" id="slide8" data-slide="8" data-stellar-background-ratio="0.1">
     <div class="scrollblock row-fluid">
       <div class="span7">
         <div class="slide5bg" id="fade-out1">
           <h2>Have a Great Time!</h2>
         </div>
-
       </div>
-      <div class="slide8bg" >
+
+    <div class="span11">
+      <div class="slide8bg">
           <h3>Signup for Beta Invitation</h3>
             <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
             <div class="emailbox">
@@ -152,24 +153,11 @@ background: transparent;
               <%= f.submit "Sign Up", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
             </div>
             <% end %>
+
+            <div class="thankyoutext"></div>
           </div>
+        </div>
     </div>
   </div>
+  
 </body>
-<script>
-  $(document).ready(function() {
-    var scrollorama = $.scrollorama({
-      blocks:'.scrollblock',
-      enablePin:false
-    });
-
-    scrollorama.animate('#fade-in1',{
-      duration:200, property:'opacity', start:0
-    });
-    scrollorama.animate('#fade-in2',{
-      delay:300, duration:300, property:'opacity', start:0
-    });
-    scrollorama.animate('#fade-in-final',{ duration:1000, property:'opacity', start:0
-    });
-  });
-</script>
