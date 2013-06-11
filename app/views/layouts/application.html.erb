@@ -12,7 +12,9 @@
   <body>
 
     <%= yield %>
-    <%= render :partial => "/devise/registrations/mobile" %>
+    <div class="visible-phone">
+      <%= render :partial => "/devise/registrations/mobile" %>
+    </div>
     <%= render :partial => "/layouts/footer" %>
   </body>
 </html>
