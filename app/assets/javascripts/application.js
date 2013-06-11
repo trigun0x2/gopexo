@@ -21,11 +21,16 @@ $('document').ready(function() {
     $("#request-invite").modal('toggle');
   }
 
+  function IsEmail(email) {
+    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  }
   // use AJAX to submit the "request invitation" form
   $('#invitation_button').on('click', function() {
     var email = $('form #user_email').val();
     var dataString = 'user[email]='+ email;
-    $.ajax({
+    if (IsEmail(email)){
+      $.ajax({
       type: "POST",
       url: "/users",
       data: dataString,
@@ -40,7 +45,10 @@ $('document').ready(function() {
 
         // loadSocial();
       }
-    });
+      });
+    }else{
+      $('.emailerror').slideDown().delay(2500).slideUp();
+    }
     return false;
   });
 })

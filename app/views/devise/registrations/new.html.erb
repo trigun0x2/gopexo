@@ -1,75 +1,13 @@
-
-<style type="text/css">
-
-.content{
-background: transparent;
-}
-
-.splash h3{
-  color: #FFF;
-  line-height: 1.5274rem;
-}
-.emailbox{
-  color: #FFF;
-}
-.splash{
-  padding-top: 200px;
-  background-color : rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 0;
-  padding-bottom: 80px;
-  vertical-align: middle;
-  color: #FFF;
-}
-.splash h2{
-  display: none;
-  color: #FFF;
-  margin-bottom: 40px;
-  margin-top: 4rem;
-}
-
-.scrolldown{
-  margin-top: 50px;
-
-}
-
-.moreinfo{
-  width: 80%;
-  color: #DDD;
-  font-size: 1.06rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-.socialimg {
-  width: 400px;
-  top: 200px;
-  left: 300px;
-  position: relative;
-}
-
-.splash h5 {
-  color: darkyellow;
-  font-family: "Roboto Slab";
-  font-size: 20px;
-}
-
-.triptext {
-  color: magenta;
-}
-.triptext2 {
-  color: turquoise;
-}
-</style>
-<body>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
     <div class="slide visible-desktop" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
 
       <div class="content">
-        <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">               
+        <div id="romance-copy" class="splash" style="text-align: center; margin-top: 80px">           
+                  <h1>What is</h1>
                   <%= image_tag('pexo.png') %>
                   <br/>
-                  <h5>are you planning a <span class="triptext">trip</span>?</h5>
-                  <h5>well, you should check us <span class="triptext2">out</span>!</h5>
+                  <h1>?</h1>
                   <p class="scrolldown">
                   <p>SCROLL TO LEARN MORE</p> 
                   <p><i class="icon-chevron-down"></i></p>
@@ -182,79 +120,23 @@ background: transparent;
       <div class="slide8bg">
           <h3>Sign Up for a Beta Invitation</h3>
           <h4>We're launching soon so don't miss out!</h4>
-            <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
-            <div class="emailbox">
-              <%= f.error_notification %>
-              <%= f.input :email, :placeholder => 'Enter your Email' , label: false %>
+          <div class="thankyoutext">
+            Thank you for signing up!
+          </div>
+          <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
+          <div class="emailbox">
+            <%= f.error_notification %>
+            <%= f.input :email, :placeholder => 'Enter your Email' , label: false %>
+            <div class="emailerror">
+              Uh oh! Invalid Email...
             </div>
-            <div id="call-to-action">
-              <%= f.submit "Sign Up", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
-            </div>
-            <% end %>
+          </div>
+          <div id="call-to-action">
+            <%= f.submit "Sign Up", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
+          </div>
+          <% end %>
 
-            <div class="thankyoutext"></div>
           </div>
         </div>
     </div>
   </div>
-
-  <footer class="visible-desktop" id="footer">
-    <div class="footer-container">
-      <div class="span2 offset2">
-        <div class="footer-header">
-          <h5><b>GoPexo</b></h5>
-        </div>
-        <a href="/about">About Us</a>
-        <br/>
-        <a href="#">Contact</a>
-      </div>
-
-      <div class="span2 offset1">
-        <div class="footer-header">
-          <h5><b>Social</b></h5>
-        </div>
-        <a href="http://www.twitter.com/gopexo">Twitter</a>
-        <br/>
-        <a href="https://www.facebook.com/pages/Gopexo/114367395400643">Facebook</a>
-      </div>
-
-      <div class="span2 offset1">
-        <div class="footer-header">
-          <h5><b>Legal</b></h5>
-        </div>
-        <a href="http//www.google.ca">Privacy</a>
-        <br/>
-        <a href="#">Images</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- MOBILE STUFF test -->
-
-<div id="romance-copy" class="splash hidden-desktop" style="text-align: center">
-  
-        <%= image_tag('pexo.png') %>
-        <h3>Collaborate with friends and family to plan your next vacation.</h3>
-        <div class="moreinfo">
-          We are a next generation trip planner for groups of friends and family. No more long email chains or messy Google Docs. Our service will help you collaborate on your itinerary, organize your budgets, and figure out cost-sharing.
-          <h4 style="color:#f4e03a;">Sign up for an invitation to beta access now!</h4>
-        </div>
-        <h2></h2>
-    <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
-    <!-- <div class="modal-header">
-      <a class="close" data-dismiss="modal">&#215;</a>
-      <h3>Request Invitation</h3>
-    </div> -->
-    <div id="email-container" class="row-fluid">
-      <div class="span8 emailbox">
-        <%= f.error_notification %>
-        <%= f.input :email, :placeholder => 'user@example.com' , label: false %>
-      </div>
-      <div class="span4" id="call-to-action" style="text-align: center">
-        <%= f.submit "Sign up", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
-      </div>
-    </div>
-  <% end %>
-</div>
-  
-</body>
