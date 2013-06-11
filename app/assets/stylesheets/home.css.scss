@@ -1,3 +1,76 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.content{
+background: transparent;
+}
+
+.splash h3{
+  color: #FFF;
+  line-height: 1.5274rem;
+}
+.emailbox{
+  color: #FFF;
+}
+.splash{
+  padding-top: 200px;
+  background-color : rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 0;
+  padding-bottom: 80px;
+  vertical-align: middle;
+  color: #FFF;
+}
+.splash h2{
+  display: none;
+  color: #FFF;
+  margin-bottom: 40px;
+  margin-top: 4rem;
+}
+
+.scrolldown{
+  margin-top: 50px;
+
+}
+
+.moreinfo{
+  width: 80%;
+  color: #DDD;
+  font-size: 1.06rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.socialimg {
+  width: 400px;
+  top: 200px;
+  left: 300px;
+  position: relative;
+}
+
+.splash h5 {
+  color: darkyellow;
+  font-family: "Roboto Slab";
+  font-size: 20px;
+}
+
+.triptext {
+  color: magenta;
+}
+.triptext2 {
+  color: turquoise;
+}
+
+.emailerror{
+  padding-top: 6px;
+  font-size: 16px;
+  height: 30px;
+  display: none;
+  border-radius: 3px;
+  width: 314px;
+  margin: auto;
+	background-color: #c0392b;
+}
+#call-to-action{
+  margin-top: 10px;
+}
