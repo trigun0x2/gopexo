@@ -8,6 +8,7 @@ Gopexo::Application.routes.draw do
     root :to => "devise/registrations#new"
     match '/users/sign_in' => "devise/registrations#new"
     match "refer/:token" => "registrations#refer", :as => "referral"
+    match "/thanks" => "registrations#thanks", :as => "thanks"
   end
 
 end
