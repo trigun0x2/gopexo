@@ -3,6 +3,7 @@ Gopexo::Application.routes.draw do
     root :to => 'devise/registrations#new'
   end
   match '/about' => 'home#about'
+  match '/imageattr' => 'home#imageattr'
   devise_for :users, :controllers => { :registrations => "registrations" }
   devise_scope :user do
     root :to => "devise/registrations#new"
