@@ -136,6 +136,7 @@
 
     <div class="span11">
       <div class="slide8bg">
+          <% @uid = SecureRandom.urlsafe_base64 %>
           <h3>Sign Up for a Beta Invitation</h3>
           <h4>We're launching soon so don't miss out!</h4>
           <div class="thankyoutext">
@@ -143,7 +144,14 @@
             Thank you for signing up!
             </h1>
             <br>
-            Share us with your friends
+            <h4>Share us with your friends!</h4>
+
+            <p>Currently planning a group trip? Share this link to invite your group members!</p>
+
+            <%= link_to "#{Rails.application.config.domain[:host]}/refer/#{@uid}" %>
+
+            <p>Invite 3 or more people and we'll give you priority access to our beta as soon as its ready!</p>
+
             <!-- AddThis Button END -->
           </div>
           <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f| %>
@@ -156,10 +164,12 @@
               <% @refer = @referrer.authentication_token %>
             <% end %>
             <%= f.hidden_field :referrer_token, :value => @refer%>
+            <%= f.hidden_field :authentication_token, :value =>  @uid %>
             <div class="emailerror">
               Uh oh! Invalid Email...
             </div>
           </div>
+            
           <div id="call-to-action">
             <%= f.submit "Sign Up", :class => "btn btn-primary btn-large", :id => 'invitation_button' %>
           </div>

@@ -29,7 +29,8 @@ $('document').ready(function() {
   $('#invitation_button').on('click', function() {
     var email = $('form #user_email').val();
     var referrer = $('form #user_referrer_token').val();
-    var dataString = 'user[email]='+ email + '&user[referrer_token]=' + referrer;
+    var token = $('form #user_authentication_token').val();
+    var dataString = 'user[email]='+ email + '&user[referrer_token]=' + referrer + '&user[authentication_token]=' + token;
     if (IsEmail(email)){
       $.ajax({
       type: "POST",
@@ -50,7 +51,7 @@ $('document').ready(function() {
     }
     return false;
   });
-})
+});
 
 $(document).ready(function() {
     var scrollorama = $.scrollorama({
