@@ -8,9 +8,11 @@ class RegistrationsController < Devise::RegistrationsController
       if resource.active_for_authentication?
         sign_in(resource_name, resource)
         respond_with resource, :location => thanks_path
+        UserMailer.welcome_email(@user).deliver
       else
         expire_session_data_after_sign_in!
         respond_with resource, :location => thanks_path
+        UserMailer.welcome_email(@user).deliver
       end
     else
       clean_up_passwords resource
