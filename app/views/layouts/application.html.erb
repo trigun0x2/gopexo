@@ -5,7 +5,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "GoPexo" %></title>
     <meta name="description" content="Reinventing the way you and your friends make travel plans">
     <meta name="keywords" content="group,planner,travel,trip,planning,vacation">
-    <meta property="og:image" content=<%= asset_path "gplogo.jpg" %>>
+    <meta property="og:image" content="<%= Rails.application.config.domain[:host] %><%= asset_path 'gplogo.jpg' %>">
     <link rel="shortcut icon" href="/images/favicon.ico" >
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
