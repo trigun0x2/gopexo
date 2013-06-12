@@ -28,7 +28,8 @@ $('document').ready(function() {
   // use AJAX to submit the "request invitation" form
   $('#invitation_button').on('click', function() {
     var email = $('form #user_email').val();
-    var dataString = 'user[email]='+ email;
+    var referrer = $('form #user_referrer_id').val();
+    var dataString = 'user[email]='+ email + '&user[referrer_token]=' + referrer;
     if (IsEmail(email)){
       $.ajax({
       type: "POST",
