@@ -9,9 +9,9 @@
 #
 MANDRILL_USERNAME: trigun0x2@gmail.com
 MANDRILL_API_KEY: m8v9fZIXlOu4TtW69eIT1g
-ADMIN_NAME: Yat Choi
-ADMIN_EMAIL: user@example.com
+ADMIN_NAME: Jeffrey Tong
+ADMIN_EMAIL: jeff@gopexo.com
 ADMIN_PASSWORD: changeme
 ROLES: [admin, user]
-EMAIL_ADDRESS: user@example.com
-DOMAIN: example.com
+EMAIL_ADDRESS: jeff@gopexo.com
+DOMAIN: gopexo.com
