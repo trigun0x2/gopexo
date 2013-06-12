@@ -40,7 +40,7 @@ $('document').ready(function() {
       success: function(data) {
 
             $('.simple_form').fadeOut(function(){
-              $('.thankyoutext').html('Thank you for signing up!').fadeIn();
+              $('.thankyoutext').fadeIn();
             });
 
         // loadSocial();
