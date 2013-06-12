@@ -1,0 +1,35 @@
+h1,h2,h3, h4, p {
+	font-family: "Roboto Slab";
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 18px;
+}
+
+.about-big {
+	height: 300px;
+	text-align: center;
+}
+
+.profile-pic {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.profile-column {
+	text-align: center;
+	min-width: 300px;
+}
+
+.grey-about {
+	background: lightgrey;
+	min-height: 500px;
+	padding: 20px;
+}

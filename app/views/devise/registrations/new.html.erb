@@ -1,5 +1,7 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+
+
     <div class="slide hidden-phone" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
 
       <div class="content">
@@ -8,11 +10,15 @@
                   <%= image_tag('pexo.png') %>
                   <br/>
                   <h1>?</h1>
-                  <p class="scrolldown">
+                  <ul class="navigation hidden-phone">
+                      <li data-slide="6"><p>SignUp<p></li>
+                  </ul>
+                  <p> OR </p>
                   <p>SCROLL TO LEARN MORE</p> 
+          
                   <p><i class="icon-chevron-down"></i></p>
                   <p><i class="icon-chevron-down"></i></p>
-                  </p>
+
 
         </div>
       </div>
@@ -48,7 +54,7 @@
         </div>
         <div class="row-fluid">
           <div class="span4">
-            <img class="board-img" src="<%= asset_path 'home.png' %>" style="height:230px"></img>
+            <img class="board-img" src="<%= asset_path 'home.png' %>" style="height:230px">
           </div>
           <div class="span8">
             <ul style="color: beige;">
@@ -83,14 +89,14 @@
             </ul>
           </div>
           <div class="span5">
-            <img class="board-img" src="<%= asset_path 'board.png' %>"></img>
+            <img class="board-img" src="<%= asset_path 'board.png' %>">
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="slide hidden-phone" id="slide5" data-slide="4" data-stellar-background-ratio="0.3">
+  <div class="slide hidden-phone" id="slide5" data-slide="5" data-stellar-background-ratio="0.3">
     <div class="scrollblock row-fluid">
       <div class="img-bg span10 offset1" id="container">
         <div class="slideheader">
@@ -99,7 +105,7 @@
         </div>
         <div class="row-fluid">
           <div class="span4">
-            <img class="board-img" src="<%= asset_path 'itin.png' %>" style="height: 220px"></img>
+            <img class="board-img" src="<%= asset_path 'itin.png' %>" style="height: 220px">
             <br/>
           </div>
           <div class="span8" id="fade-in2">
@@ -115,18 +121,7 @@
     </div>
   </div>
 
-  <div class="slide hidden-phone" id="slide6" data-slide="4" data-stellar-background-ratio="0.5">
-    <div class="scrollblock row-fluid">
-      <div class="span6 offset1">
-        <div class="slide5bg" id="fade-in2">
-        <h2>Visualize</h2>
-        <h3>Look over your budget and split the costs</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide hidden-phone" id="slide7" data-slide="4" data-stellar-background-ratio="0.5">
+  <div class="slide hidden-phone" id="slide7" data-stellar-background-ratio="0.5">
     <div class="scrollblock row-fluid">
       <div class="span4 offset4">
         <h2>That's it!</h2>
@@ -135,7 +130,7 @@
     </div>
   </div>
 
-  <div class="slide hidden-phone" id="slide8" data-slide="8" data-stellar-background-ratio="0.1">
+  <div class="slide hidden-phone" id="slide8" data-slide="6" data-stellar-background-ratio="0.1">
     <div class="scrollblock row-fluid">
       <div class="span7">
         <div class="slide8bg1" id="fade-out1">
@@ -170,16 +165,6 @@
           <div class="emailbox">
             <%= f.error_notification %>
             <%= f.input :email, :placeholder => 'Enter your Email' , label: false %>
-
-            <% @refer = nil %>
-            <% puts "BLAH BLAH BLAH" %>
-            <% @referrer %>
-            <% if @referrer %>
-              <% @refer = @referrer.authentication_token %>
-            <% end %>  
-
-            <%= f.hidden_field :referrer_id, :value => @refer %>
-
             <div class="emailerror">
               Uh oh! Invalid Email...
             </div>
@@ -193,3 +178,6 @@
         </div>
     </div>
   </div>
+<div class="visible-phone">
+      <%= render :partial => "/devise/registrations/mobile" %>
+</div>
