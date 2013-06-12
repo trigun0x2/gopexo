@@ -28,7 +28,7 @@ $('document').ready(function() {
   // use AJAX to submit the "request invitation" form
   $('#invitation_button').on('click', function() {
     var email = $('form #user_email').val();
-    var referrer = $('form #user_referrer_id').val();
+    var referrer = $('form #user_referrer_token').val();
     var dataString = 'user[email]='+ email + '&user[referrer_token]=' + referrer;
     if (IsEmail(email)){
       $.ajax({
@@ -36,14 +36,12 @@ $('document').ready(function() {
       url: "/users",
       data: dataString,
       error: function(data){
-        alert('random error');
+        alert('Unable to save email');
       },
       success: function(data) {
-
-            $('.simple_form').fadeOut(function(){
-              $('.thankyoutext').fadeIn();
-            });
-
+        $('.simple_form').fadeOut(function(){
+          $('.thankyoutext').fadeIn();
+        });
         // loadSocial();
       }
       });
