@@ -37,7 +37,7 @@ $('document').ready(function() {
       url: "/users",
       data: dataString,
       error: function(data){
-        alert('Unable to save email');
+        $('.emailerror').slideDown().delay(2500).slideUp();
       },
       success: function(data) {
         $('.simple_form').fadeOut(function(){
