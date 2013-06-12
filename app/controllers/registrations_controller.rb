@@ -20,6 +20,12 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def refer
+    @referrer = User.where(:authentication_token => params[:token]).first
+
+    render 'devise/registrations/new'
+  end
+
   protected
 
   def after_inactive_sign_up_path_for(resource)

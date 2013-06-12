@@ -170,6 +170,16 @@
           <div class="emailbox">
             <%= f.error_notification %>
             <%= f.input :email, :placeholder => 'Enter your Email' , label: false %>
+
+            <% @refer = nil %>
+            <% puts "BLAH BLAH BLAH" %>
+            <% @referrer %>
+            <% if @referrer %>
+              <% @refer = @referrer.authentication_token %>
+            <% end %>  
+
+            <%= f.hidden_field :referrer_id, :value => @refer %>
+
             <div class="emailerror">
               Uh oh! Invalid Email...
             </div>
