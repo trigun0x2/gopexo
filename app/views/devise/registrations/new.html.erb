@@ -1,8 +1,8 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
 
-<ul class="navigation hidden-phone" style="position:fixed; bottom: 50px;right:50px;">
-  <li class="button-white-css" data-slide="6">Sign Up Now</li>
+<ul class="navigation hidden-phone" style="position:fixed; bottom: 50px;right:100px;">
+  <li class="signupbutton" data-slide="6">Sign Up Now</li>
           </ul>
 
   <div class="slide hidden-phone" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" >
@@ -10,8 +10,8 @@
       <div class="content">
         <div id="romance-copy" class="splash" style="text-align: center;">           
           <%= image_tag('pexo.png') %>
-          <h5>planning a group <span class="triptext">trip</span>?</h5>
-          <h5>we'll make it <span class="triptext2">easy</span></h5>
+          <h5>planning a group trip?</h5>
+          <h5>we'll make it easy</h5>
 
           <p style="margin-top: 50px">SCROLL TO LEARN MORE</p> 
   
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <div class="slide hidden-phone" id="slide3" data-slide="3" data-stellar-background-ratio="0.2">
+  <div class="slide hidden-phone" id="slide3" data-slide="3" data-stellar-background-ratio="0.1">
     <div class="scrollblock row-fluid">
       <div class="span12">
         <div class="slide2bg">
@@ -48,23 +48,29 @@
       </div>
     </div>
     <div class="scrollblock row-fluid">
-      <div class="span6 slide3position">
-        <%= image_tag('trip.png', :class=>"slide3pic") %>
-      </div>
-      <div class="span5 slide3position">
-        <div class="slide4info" id="fade-in2">
-          <h4>Get on the Same Page</h4>
-          <h5>Literally! We provide a platform for you and your group members to consolidate your planning.</h5>
+      <div class="slide2bg slide3position span10 offset1">
+        <div class="row-fluid span8 offset2">
+          <%= image_tag('trip.png', :class=>"slide3pic") %>
         </div>
-          <div class="slide4info">
-          <h4>Share Your Needs</h4>
-          <h5>Its hard to communicate crucial information like budget and dietary restrictions on email or Facebook. Our service makes sure important information about you is properly shared.</h5>
+        <div class="row-fluid span12 scrollblock" style="padding-top: 15px; padding-right: 40px;">
+          <div class="span4 slide3info">
+            <h4>Get on the Same Page</h4>
+            <h5>Literally! We provide a platform for you and your group members to consolidate your planning.</h5>
+          </div>
+          <div class="span4 slide3info">
+            <h4>Share Your Needs</h4>
+            <h5>Its hard to communicate crucial information like budget and dietary restrictions on email or Facebook. Our service makes sure important information about you is properly shared.</h5>
+          </div>
+          <div class="span4 slide3info">
+            <h4>Get Social</h4>
+            <h5>Get recommendations from your Facebook friends or from our users who have done a similar trip.</h5>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="slide hidden-phone" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
+  <div class="slide hidden-phone" id="slide4" data-slide="4" data-stellar-background-ratio="0.2">
     <div class="scrollblock row-fluid">
       <div class="span12">
         <div class="slide4bg" id="fade-in2">
@@ -73,25 +79,28 @@
         </div>
       </div>
     </div>
-    <div class="scrollblock row-fluid">
-      <div class="span5 offset1 slide4position">
-        <div class="slide4info">
-          <h4>Ensure a Perfect Vacation</h4>
-          <h5>We make it easy for everyone to have a say in what they want to do. Unlike other tools, sharing is easy and organized!</h5>
+    <div class="row-fluid span12">
+      <div class="slide4bg span10 offset1 slide4position">
+        <div class="row-fluid span10 offset1">
+          <%= image_tag('board.png', :class=>"slide4pic") %>
         </div>
-          <div class="slide4info">
-          <h4>Voting and Decision Making</h4>
-          <h5>Visualize your options so you can pick and choose the most popular ideas.</h5>
+        <div class="row-fluid span10 offset1">
+          <div class="span6 slide4info">
+            <h4>Ensure a Perfect Vacation</h4>
+            <h5>We make it easy for everyone to have a say in what they want to do. Unlike other tools, sharing is easy and organized!</h5>
+          </div>
+            <div class="span6 slide4info">
+            <h4>Voting and Decision Making</h4>
+            <h5>Visualize your options so you can pick and choose the most popular ideas.</h5>
+          </div>
         </div>
       </div>
-      <div class="span6 slide4position">
-        <%= image_tag('board.png', :class=>"slide4pic") %>
-      </div>
+
     </div>
   </div>
 
   <div class="slide hidden-phone" id="slide5" data-slide="4" data-stellar-background-ratio="0.5">
-    <div class="scrollblock row-fluid">
+    <div class="row-fluid">
       <div class="span12">
         <div class="slide5bg" id="fade-in2">
         <h2>Plan</h2>
@@ -99,15 +108,15 @@
         </div>
       </div>
     </div>
-   <div class="span6 slide4position">
-      <%= image_tag('itin.png', :class=>"slide3pic") %>
+   <div class="span6 slide4position slide5info">
+      <%= image_tag('itin.png', :class=>"slide5pic") %>
     </div>
-    <div class="span5 slide4position">
-      <div class="slide4info">
-        <h4>Smart Itineraries</h4>
-        <h5>Schedule your trip based on popular ideas.</h5>
+    <div class="scrollblock span5 slide4position">
+      <div class="slide5info fade-in1">
+        <h4>Drag and Drop</h4>
+        <h5>Easily place the most popular ideas directly into your itinerary</h5>
       </div>
-      <div class="slide4info">
+      <div class="slide5info fade-in2">
         <h4>Learn from Others</h4>
         <h5>View and draw from the trip plans of other people who have done similar trips!</h5>
       </div>
