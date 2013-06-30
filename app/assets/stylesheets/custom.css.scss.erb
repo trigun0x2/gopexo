@@ -6,24 +6,27 @@ html,body{
   padding: 0px;
 }
 
+.signupbutton {
+  border-radius: 5px;
+  background-color: darkturquoise;
+  color: white;
+  font-family: "Helvetica Neue";
+  line-height: 1.3;
+  display:block;
+  padding: 10px 0px 0px 20px;
+  font-size: 20px;
+  width: 140px;
+  height: 35px;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+}
+
 .navigation{
   margin: auto;
   width: 100px;
 	z-index:1;
 }
-.navigation li{
-  font-family: "Helvetica Neue";
-  color: black;
-	display:block;
-	padding: 0 10px;
-	line-height:30px;
-	margin-bottom:2px;
-	font-weight:bold;
-	-webkit-transition: all .2s ease-in-out;
-  text-align:center;
-  background-color:#333333;
-  cursor:pointer;
-}
+
 .logoimage{
 	width:446px;
 }
@@ -126,7 +129,7 @@ html,body{
 }
 
 #slide2 {
-  font-size: 35px;
+  font-size: 20px;
   color: black;
   font-family: 'Roboto Slab';
   font-weight: 300;
@@ -138,6 +141,7 @@ html,body{
   background-color: rgba(0,0,0,0.7);
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 }
 /******************************
  SLIDE 3 
@@ -149,7 +153,7 @@ html,body{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	height: 1300px;
+	height: 1600px;
 }
 
 .slide3bg {
@@ -165,16 +169,59 @@ html,body{
   font-weight: 300;
   color: #D66666;
   font-size: 66px;
-  margin-left: 100px;
 }
 #slide3 h3 {
-  margin-left: 100px;
   color: #FFFFBB;
   line-height: 1.5;
   font-size: 26px;
-  width: 80%;
   font-family: "Roboto Slab";
   font-weight: 300;
+  margin: auto;
+  text-align: center;
+}
+
+#slide3 {
+  h4 {
+    color: #D66666;
+    line-height: 1.5;
+    font-size: 24px;
+    width: 100%;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    text-align: center;
+  }
+  h5 {
+    color: #FFFFBB;
+    font-size: 18px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+  }
+} 
+
+.slide3position {
+  position: relative;
+  top: 400px;
+  #with-border {
+    border-right: 1px solid grey;
+  }
+}
+
+.slide3info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  height: 250px;
+}
+
+.slide3pic {
+  border-radius: 10px;
+  float: right;
+  margin-top: 15px;
 }
 
 /******************************
@@ -188,7 +235,7 @@ html,body{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	height: 900px;
+	height: 1400px;
 }
 
 
@@ -197,16 +244,43 @@ html,body{
   font-weight: 300;
   color: #1DD1D1;
   font-size: 66px;
-  margin-left: 100px;
+  // margin-left: 100px;
 }
 #slide4 h3 {
-  margin-left: 100px;
+  // margin-left: 100px;
   color: #FFFFBB;
   line-height: 1.5;
   font-size: 26px;
-  width: 70%;
+  // width: 70%;
   font-family: "Roboto Slab";
   font-weight: 300;
+}
+#slide4 {
+  h4 {
+  color: #1DD1D1;
+  line-height: 1.5;
+  font-size: 24px;
+  width: 100%;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+  text-align: center;
+  }
+  h5 {
+    color: #FFFFBB;
+    font-size: 18px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+  }
+} 
+
+.slide4position {
+  position: relative;
+  top: 250px;
 }
 
 .slide4bg {
@@ -215,6 +289,18 @@ html,body{
   background-color: rgba(0,0,0,0.7);
   padding-top: 20px;
   padding-bottom: 20px;
+  margin:auto;
+  text-align: center;
+}
+
+.slide4info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.slide4pic {
+  border-radius: 10px;
 }
 
 
@@ -243,10 +329,8 @@ html,body{
   font-weight: 300;
   color: darksalmon;
   font-size: 66px;
-  margin-left: 100px;
 }
 #slide5 h3 {
-  margin-left: 100px;
   color: #FFFFBB;
   line-height: 1.5;
   font-size: 26px;
@@ -255,12 +339,48 @@ html,body{
   margin-bottom: 10px;
 }
 
+#slide5 {
+  h4 {
+  color: darksalmon;
+  line-height: 1.5;
+  font-size: 24px;
+  width: 100%;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+  text-align: center;
+  }
+  h5 {
+    color: #FFFFBB;
+    font-size: 18px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+  }
+} 
+
 .slide5bg {
   position: relative;
   top: 200px;
   background-color: rgba(0,0,0,0.7);
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
+}
+
+.slide5info {
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.slide5pic {
+  width: 95%;
+  margin-left: 2.5%;
 }
 
 /******************************
