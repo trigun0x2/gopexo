@@ -1,4 +1,10 @@
-h1,h2,h3, h4, p {
+h1{
+	font-size: 130px;
+	font-family: "Roboto Slab";
+	font-weight: 300;
+	line-height: 1.5;
+}
+h2,h3, h4, p {
 	font-family: "Roboto Slab";
 	font-weight: 300;
 	line-height: 1.5;
@@ -13,7 +19,7 @@ p {
 }
 
 .about-big {
-	height: 300px;
+	height: 35%;
 	text-align: center;
 }
 
@@ -30,6 +36,21 @@ p {
 
 .grey-about {
 	background: lightgrey;
-	min-height: 500px;
+	min-height: 54%;
 	padding: 20px;
+	padding-top: 50px;
+}
+
+.back {
+	text-decoration: none;
+	text-align:center;
+	font-size: 20px;
+	font-weight: bold;
+}
+.back a{
+	color: black;
+}
+.back a:hover{
+	text-decoration: none;
+	color: #e74c3c;
 }

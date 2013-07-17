@@ -1,4 +1,6 @@
 Gopexo::Application.routes.draw do
+  mount RailsEmailPreview::Engine, at: 'emails'
+
   authenticated :user do
     root :to => 'devise/registrations#new'
   end
