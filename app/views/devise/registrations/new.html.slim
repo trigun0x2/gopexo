@@ -1,0 +1,79 @@
+div.landcontainer
+  /BEGIN HEADER
+  div.header
+    div.logo
+      img src='/assets/gopexo.png'
+    div.nav
+      a href="#" Main Page 
+      a href="#" Alpha 
+      a href="#" About Us
+  /END HEADER
+
+  /BEGIN HERO
+  div.hero
+    div.overlay
+      div.maintext
+        | Plan a Trip 
+        div class="rw-words rw-words-1"
+          span Together
+          span Easily
+          span You'll Never Forget
+      div.subtext
+        |The best way to plan travel with friends and family
+  /END HERO
+
+  /BEGIN MAIN CONTENT
+  div.main
+    div.connect
+      div.content
+        div.title
+          |Connect with your group
+        div.description
+          |How much do you want to spend? What type of trip do you want to have? Share your preferences to decide on the direction of your trip. We'll provide suggestions based on your interests!
+      div.image
+        =image_tag('connect.png')
+
+    div.idea
+      div.image
+          =image_tag('toronto.jpg')
+      div.content
+        div.title
+          |Discover and suggest ideas
+        div.description
+          |Collect all of your travel research and ideas in one place. Discuss and vote on what you want to do!
+
+    div.plan
+      div.content
+        div.title
+          |Work out a schedule together
+        div.description
+          |Once upon a time, your itinerary was a spreadsheet or a huge block of text. GoPexo makes it easy for everyone to interact with your trip plan. Just drag your ideas into timeslots and watch as your trip immediately appears on the map!
+
+    div.footer
+      div.left
+        |Left shit
+      div.right
+        |Right shit
+
+    div.signup
+        div.thankyoutext
+          | Thank You!
+          | Share us with your friend
+          
+        =simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f|
+          div.emailbox
+            = f.error_notification
+            = f.input :email, :placeholder => 'Enter your Email' , label: false
+            - @refer = nil 
+            - if @referrer 
+              - @refer = @referrer.authentication_token 
+
+            = f.hidden_field :referrer_token, :value => @refer
+            = f.hidden_field :authentication_token, :value =>  @uid 
+            div.emailerror
+              |Uh oh! Invalid Email...
+          
+          div.call-to-action
+            = f.submit "Sign Up", :class => "btn btn-primary btn-large", :id => 'invitation_button'
+  div class="visible-phone"
+    = render :partial => "/devise/registrations/mobile"

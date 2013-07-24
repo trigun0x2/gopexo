@@ -228,5 +228,6 @@ DEPENDENCIES
   rspec-rails (>= 2.12.2)
   sass-rails (~> 3.2.3)
   simple_form (>= 2.1.0)
+  slim
   sqlite3
   uglifier (>= 1.0.3)
