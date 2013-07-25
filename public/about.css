@@ -71,7 +71,7 @@ p {
 .grey-about {
 	background: white;
 	height: 600px;
-	padding-top: 100px;
+	padding-top: 40px;
 	padding-left: 220px;
 	padding-right: 220px;
 }
@@ -92,5 +92,5 @@ p {
 .abouttop{
 	background-image: url('/images/topImage.jpg');
 	background-size: cover;
-	height: 400px;
+	height: 525px;
 }
