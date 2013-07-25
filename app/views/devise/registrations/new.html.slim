@@ -61,7 +61,8 @@ div.landcontainer
       div.signupbox
         div.thankyoutext
           | Thank You!
-          | Share us with your friend
+          br
+          | Don't forget to share us with your friend.
           
         =simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f|
           div.emailbox
