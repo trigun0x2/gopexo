@@ -1,16 +1,18 @@
+link href='http://fonts.googleapis.com/css?family=Scada:400,700' rel='stylesheet' type='text/css'
+link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'
+
 div.landcontainer
   /BEGIN HEADER
-  div.header
+  div.header.hidden-phone
     div.logo
       img src='/assets/gopexo.png'
     div.nav
-      a href="#" Main Page 
-      a href="#" Alpha 
-      a href="#" About Us
+      a href="/" Home
+      a href="/about" About Us
   /END HEADER
 
   /BEGIN HERO
-  div.hero
+  div.hero.hidden-phone
     div.overlay
       div.maintext
         | Plan a Trip 
@@ -20,10 +22,12 @@ div.landcontainer
           span You'll Never Forget
       div.subtext
         |The best way to plan travel with friends and family
+      div id="signupbut"
+        |Sign Up Now
   /END HERO
 
   /BEGIN MAIN CONTENT
-  div.main
+  div.main.hidden-phone
     div.connect
       div.content
         div.title
@@ -31,11 +35,11 @@ div.landcontainer
         div.description
           |How much do you want to spend? What type of trip do you want to have? Share your preferences to decide on the direction of your trip. We'll provide suggestions based on your interests!
       div.image
-        =image_tag('connect.png')
+        =image_tag('start.png')
 
-    div.idea
+    div.ideas
       div.image
-          =image_tag('toronto.jpg')
+          =image_tag('toronto1.jpg')
       div.content
         div.title
           |Discover and suggest ideas
@@ -48,14 +52,13 @@ div.landcontainer
           |Work out a schedule together
         div.description
           |Once upon a time, your itinerary was a spreadsheet or a huge block of text. GoPexo makes it easy for everyone to interact with your trip plan. Just drag your ideas into timeslots and watch as your trip immediately appears on the map!
-
-    div.footer
-      div.left
-        |Left shit
-      div.right
-        |Right shit
+      div.image
+        =image_tag('plan.png')
 
     div.signup
+      h2 Join the Adventure
+      h3 CLAIM YOUR FIRST CLASS SEAT TO OUR LAUNCH
+      div.signupbox
         div.thankyoutext
           | Thank You!
           | Share us with your friend
@@ -63,17 +66,38 @@ div.landcontainer
         =simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f|
           div.emailbox
             = f.error_notification
-            = f.input :email, :placeholder => 'Enter your Email' , label: false
-            - @refer = nil 
-            - if @referrer 
-              - @refer = @referrer.authentication_token 
-
+            = f.input :email, :placeholder => 'Your email' , label: false
             = f.hidden_field :referrer_token, :value => @refer
             = f.hidden_field :authentication_token, :value =>  @uid 
+            = f.submit " ", :class => "airplanebutton", :id => 'invitation_button'
             div.emailerror
               |Uh oh! Invalid Email...
-          
-          div.call-to-action
-            = f.submit "Sign Up", :class => "btn btn-primary btn-large", :id => 'invitation_button'
+
+    div.footer
+      div.footcont
+        / div.quote
+        /   |“ The world is a book and those who do not travel read only one page. ”
+        / div.author
+        /   |~ St. Augustine
+        a href="/about" About Us
+        a href="http://alpha.gopexo.com"Alpha
+        a href="mailto:info@gopexo.com"  class="social"
+          = image_tag('icons/gmail.png', class:'social')
+        a href="https://www.facebook.com/pages/GoPexo/114367395400643"  class="social"
+          = image_tag('icons/facebookfront.png', class:'social')
+        a href="https://twitter.com/GoPexo"   class="social"
+          = image_tag('icons/twitterfront.png', class:'social')
+
   div class="visible-phone"
     = render :partial => "/devise/registrations/mobile"
+
+    javascript:
+      $(document).ready(function (){
+          $("#signupbut").click(function (){
+              //$(this).animate(function(){
+                  $('html, body').animate({
+                      scrollTop: $(".signup").offset().top
+                       }, 2000);
+              //});
+          });
+      });

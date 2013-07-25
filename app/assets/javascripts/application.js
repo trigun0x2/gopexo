@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.ui.all
 //= require_tree .
 $('document').ready(function() {
 
@@ -37,7 +38,7 @@ $('document').ready(function() {
       url: "/users",
       data: dataString,
       error: function(data){
-        $('.emailerror').slideDown().delay(2500).slideUp();
+        $('.email').slideDown().delay(2500).slideUp();
       },
       success: function(data) {
         $('.simple_form').fadeOut(function(){
@@ -47,25 +48,29 @@ $('document').ready(function() {
       }
       });
     }else{
-      $('.emailerror').slideDown().delay(2500).slideUp();
+      $('.email').addClass('shake').delay(200)
+			                       .queue(function() {
+			                           $(this).removeClass("shake");
+			                           $(this).dequeue();
+			                       });
     }
     return false;
   });
 });
 
-$(document).ready(function() {
-  var scrollorama = $.scrollorama({
-    blocks:'.scrollblock',
-    enablePin:false
-  });
+// $(document).ready(function() {
+//   var scrollorama = $.scrollorama({
+//     blocks:'.scrollblock',
+//     enablePin:false
+//   });
 
-  scrollorama.animate('.fade-in1',{
-    duration:400, property:'opacity', start:0
-  });
-  scrollorama.animate('.fade-in2',{
-    duration:600, property:'opacity', start:0
-  });
-});
+//   scrollorama.animate('.fade-in1',{
+//     duration:400, property:'opacity', start:0
+//   });
+//   scrollorama.animate('.fade-in2',{
+//     duration:600, property:'opacity', start:0
+//   });
+// });
 
 // load social sharing scripts if the page includes a Twitter "share" button
 // function loadSocial() {
