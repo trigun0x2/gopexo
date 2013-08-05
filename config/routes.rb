@@ -5,6 +5,7 @@ Gopexo::Application.routes.draw do
     root :to => 'devise/registrations#new'
   end
   match '/about' => 'home#about'
+  match '/admin' => 'users#index'
   match '/imageattr' => 'home#imageattr'
   devise_for :users, :controllers => { :registrations => "registrations" }
   devise_scope :user do
@@ -13,5 +14,9 @@ Gopexo::Application.routes.draw do
     match "refer/:token" => "registrations#refer", :as => "referral"
     match "/thanks" => "registrations#thanks", :as => "thanks"
   end
-
+  devise_for :users, :controllers => { :registrations => "registrations", :confirmations => "confirmations" }
+  match 'users/bulk_invite/:quantity' => 'users#bulk_invite', :via => :get, :as => :bulk_invite
+  resources :users do
+    get 'invite', :on => :member
+  end
 end
